@@ -1,12 +1,15 @@
-<form #AddLP='ngForm' (ngSubmit) = 'processForm(AddLP)'>
-  <input type="text" name='FormAlbumName' placeholder="Album Name" ngModel>
-  <br>
-  <input type="text" name='FormArtist' placeholder="Artist" ngModel>
-  <br>
-  <input type="range" name="FormRating" min="0" max="10" value = "5" ngModel>
-  <br>
-  <input type="text" name='FormAlbumCoverImage' placeholder="Album Cover Image" ngModel>
-  <br>
-  <button type="reset">Clear</button>
-  <button type="submit">Add</button>
+<form #AddLP="ngForm" (ngSubmit) = "processForm(AddLP)" fxLayout="column" fxLayoutGap="2vw" fxLayoutAlign="start">
+      <mat-form-field>  
+        <input type="text" name="FormAlbumName" placeholder="Album Name" ngModel required matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" name="FormArtist" placeholder="Artist" ngModel required matInput>
+      </mat-form-field>
+      <mat-slider name="FormRating" max="10" min="0" step="1" tickInterval="1" (ngModel)="5">
+      </mat-slider> 
+      <mat-form-field>
+        <input type="text" name="FormAlbumCoverImage" placeholder="Album Cover Image" ngModel matInput>
+      </mat-form-field>
+        <button type="reset" mat-raised-button color="primary">Clear</button>
+        <button type="submit" [disabled] = "AddLP.invalid" mat-raised-button color="primary">Add</button>
 </form>

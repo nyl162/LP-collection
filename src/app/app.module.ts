@@ -8,7 +8,6 @@ import { ListComponent } from './list/list.component';
 import { MaterialModule } from './material.modules';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,

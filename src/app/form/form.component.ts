@@ -47,6 +47,7 @@ export class FormComponent implements OnInit {
   console.log("form input ---->", FormList);
 
   this.addEntry.next(FormList);
+  FormInput.reset();
   }
 
 }
