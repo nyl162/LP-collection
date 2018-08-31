@@ -10,7 +10,10 @@ import { RatingList } from './form/form.component';
 export class AppComponent {
   title = 'LP-collection';
   
-  MasterRatingList: RatingList[] = [];
+  MasterRatingList: RatingList[] = [
+   // {AlbumName: "Name", Artist: "fasd", Rating: 6, AlbumCoverImage: "/src/assets/images/LP_Vinyl_Symbol_Icon.png"},
+   // {AlbumName: "2ndName", Artist: "asdf", Rating: 7, AlbumCoverImage: "/src/assets/images/LP_Vinyl_Symbol_Icon.png"}
+  ];
 
   AddNewEntry(ReceivedList:RatingList){
     console.log("RatingListReceived -------> "+ ReceivedList);

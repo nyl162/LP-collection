@@ -1,14 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="exPad">
-  <mat-toolbar color = "primary" class="exPad">
-    <img src="/src/assets/images/LP_Vinyl_Symbol_Icon.png" alt="" class="icon">
-    <span class = "titleFont">My LP Collection</span> 
-  </mat-toolbar>
-  <div class="exPad">
-    <app-form (addEntry)="AddNewEntry($event)"></app-form>
-  </div>
-  <div class="exPad">
-    <app-list [listList]="MasterRatingList"></app-list>
+  <div fxLayout = "column" fxLayoutAlign = "space-around">
+    <mat-toolbar color = "primary" class ="exPad">
+      <img src="/src/assets/images/LP_Vinyl_Symbol_Icon.png" alt="" class="icon">
+      <span class = "titleFont exPad">My LP Collection</span> 
+    </mat-toolbar>
+    <div class="exPad">
+      <app-form (addEntry)="AddNewEntry($event)"></app-form>
+    </div>
+    <div class="exPad">
+      <app-list [listList]="MasterRatingList"></app-list>
+    </div>
   </div>
 </div>

@@ -1,6 +1,13 @@
-<div *ngFor="let n of listList">
-  <img [src]="n.AlbumCoverImage" alt="" class="icon">
-  {{n.AlbumName}}
-  {{n.Artist}}
-  Rating: {{n.Rating}}
-</div>
+<mat-card *ngFor="let n of listList" class="exPad">
+  <mat-card-content fxLayoutAlign="space-between">
+    <img [src]="n.AlbumCoverImage" alt="" class="icon"  fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex="glow" fxLayout="column" fxLayoutAlign="space-between" class="exPad">
+      <div class = "albumTitle">{{n.AlbumName}}</div>
+      <div class = "albumArtist">{{n.Artist}}</div>
+    </div>
+    <div fxLayout = "column" fxLayoutAlign = "space-between" style="width:70px">
+      <div  fxLayoutAlign = "end"><mat-icon>share</mat-icon></div>
+      <div>Rating: {{n.Rating}}</div>
+    </div>
+  </mat-card-content>
+</mat-card>
