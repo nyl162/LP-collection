@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="exPad">
-  <div fxLayout = "column" fxLayoutAlign = "space-around">
+  <div class="aFloat">
     <mat-toolbar color = "primary" class ="exPad">
       <img src="/src/assets/images/LP_Vinyl_Symbol_Icon.png" alt="" class="icon">
       <span class = "titleFont exPad">My LP Collection</span> 
@@ -9,8 +9,8 @@
     <div class="exPad">
       <app-form (addEntry)="AddNewEntry($event)"></app-form>
     </div>
-    <div class="exPad">
+  </div>
+    <div class="exPad albumList">
       <app-list [listList]="MasterRatingList"></app-list>
     </div>
-  </div>
 </div>

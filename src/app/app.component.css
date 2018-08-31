@@ -1,3 +1,13 @@
 .titleFont{
     font-size: 2em;
 }
+.aFloat{
+    position: fixed;
+    width: 98%;
+    background-color: white;
+}
+.albumList{
+    position: relative;
+    top: 450px;
+    z-index: -1;
+}    
