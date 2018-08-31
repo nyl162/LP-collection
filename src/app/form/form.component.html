@@ -10,6 +10,8 @@
       <mat-form-field>
         <input type="text" name="FormAlbumCoverImage" placeholder="Album Cover Image" ngModel matInput>
       </mat-form-field>
+      <div fxLayputGap = "2vw" fxLayoutAlign = "space-between">
         <button type="reset" mat-raised-button color="primary">Clear</button>
         <button type="submit" [disabled] = "AddLP.invalid" mat-raised-button color="primary">Add</button>
+      </div>
 </form>
