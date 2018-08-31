@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 export interface RatingList{
@@ -15,6 +15,11 @@ export interface RatingList{
 })
 export class FormComponent implements OnInit {
 
+  
+@Output()
+  addEntry = new EventEmitter<RatingList>();
+
+
   constructor() { }
 
   ngOnInit() {
@@ -30,16 +35,18 @@ export class FormComponent implements OnInit {
   }
 
   //default rating
-  if(FormList.Rating == null){
+  if(FormInput.value.FormRating == null || FormInput.value.FormRating == "" ){
     FormList.Rating = 5;
   }
 
   //default image
-  if(FormList.AlbumCoverImage == null){
-    FormList.AlbumCoverImage = "/src/asset/images/LP_Vinyl_Symbol_Icon.png";
+  if(FormList.AlbumCoverImage == null || FormList.AlbumCoverImage.length == 0){
+    FormList.AlbumCoverImage = "/src/assets/images/LP_Vinyl_Symbol_Icon.png";
   }
 
   console.log("form input ---->", FormList);
+
+  this.addEntry.next(FormList);
   }
 
 }

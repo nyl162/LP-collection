@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+.icon{
+    height: 50px;
+    width: 50px;
+}
+.exPad{
+    margin: 10px;
+}

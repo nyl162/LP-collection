@@ -1,4 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-form></app-form>
-<app-list></app-list>
+<div class="exPad">
+  <div class="exPad">
+    <img src="/src/assets/images/LP_Vinyl_Symbol_Icon.png" alt="" class="icon">
+  </div>
+  <div class="exPad">
+    <app-form (addEntry)="AddNewEntry($event)"></app-form>
+  </div>
+  <div class="exPad">
+    <app-list [listList]="MasterRatingList"></app-list>
+  </div>
+</div>
