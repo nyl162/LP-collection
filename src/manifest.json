@@ -5,7 +5,7 @@
   "background_color": "#2196f3",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/LPCollection",
+  "start_url": "/LP-collection",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

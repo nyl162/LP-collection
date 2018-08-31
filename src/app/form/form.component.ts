@@ -41,7 +41,7 @@ export class FormComponent implements OnInit {
 
   //default image
   if(FormList.AlbumCoverImage == null || FormList.AlbumCoverImage.length == 0){
-    FormList.AlbumCoverImage = "/src/assets/images/LP_Vinyl_Symbol_Icon.png";
+    FormList.AlbumCoverImage = "/assets/images/LP_Vinyl_Symbol_Icon.png";
   }
 
   console.log("form input ---->", FormList);
