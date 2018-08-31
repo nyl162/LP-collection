@@ -1,3 +1,12 @@
-<p>
-  form works!
-</p>
+<form #AddLP='ngForm' (ngSubmit) = 'processForm(AddLP)'>
+  <input type="text" name='FormAlbumName' placeholder="Album Name" ngModel>
+  <br>
+  <input type="text" name='FormArtist' placeholder="Artist" ngModel>
+  <br>
+  <input type="range" name="FormRating" min="0" max="10" value = "5" ngModel>
+  <br>
+  <input type="text" name='FormAlbumCoverImage' placeholder="Album Cover Image" ngModel>
+  <br>
+  <button type="reset">Clear</button>
+  <button type="submit">Add</button>
+</form>
